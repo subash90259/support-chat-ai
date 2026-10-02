@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f0f2f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+
+/* =================================
+   CHAT CONTAINER
+   ================================= */
+
+.chat-container {
+    width: 450px;
+    height: 650px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+.chat-header {
+    background-color: #075e54;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+.chat-header h2 {
+    margin: 0;
+}
+
+
+/* =================================
+   MESSAGE AREA
+   ================================= */
+
+.chat-messages {
+    flex: 1;
+
+    padding: 15px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: #efeae2;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* =================================
+   COMMON MESSAGE
+   ================================= */
+
+.message {
+    max-width: 75%;
+
+    min-width: 0;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+}
+
+
+/* =================================
+   AI MESSAGE
+   ================================= */
+
+.ai-message {
+    background-color: white;
+
+    align-self: flex-start;
+
+    max-width: 85%;
+
+    min-width: 0;
+
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =================================
+   USER MESSAGE
+   ================================= */
+
+.user-message {
+    background-color: #d9fdd3;
+
+    align-self: flex-end;
+
+    max-width: 75%;
+
+    overflow-wrap: break-word;
+}
+
+
+/* =================================
+   CODE BLOCK
+   ================================= */
+
+.code-block {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    margin: 12px 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background-color: #1e1e1e;
+
+    color: #ffffff;
+}
+
+
+/* =================================
+   CODE HEADER
+   ================================= */
+
+.code-header {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background-color: #2d2d2d;
+
+    font-size: 13px;
+
+    min-width: 0;
+}
+
+
+/* =================================
+   CODE LANGUAGE
+   ================================= */
+
+.code-language {
+    color: #cccccc;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   COPY BUTTON
+   ================================= */
+
+.copy-button {
+    border: none;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background-color: #444444;
+
+    color: white;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+}
+
+.copy-button:hover {
+    background-color: #555555;
+}
+
+
+/* =================================
+   CODE CONTENT
+   ================================= */
+
+.code-block pre {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    padding: 15px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    white-space: pre;
+
+    tab-size: 4;
+}
+
+
+/* =================================
+   CODE
+   ================================= */
+
+.code-block code {
+    background-color: transparent;
+
+    color: inherit;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+
+/* =================================
+   INLINE CODE
+   ================================= */
+
+.inline-code {
+    padding: 2px 5px;
+
+    border-radius: 4px;
+
+    background-color: #eeeeee;
+
+    color: #222222;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 0.9em;
+}
+
+
+/* =================================
+   AI TEXT
+   ================================= */
+
+.ai-message strong {
+    font-weight: 600;
+}
+
+
+/* =================================
+   AI LIST
+   ================================= */
+
+.ai-message ul {
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+    padding-left: 22px;
+}
+
+.ai-message li {
+    margin-bottom: 5px;
+}
+
+
+/* =================================
+   INPUT AREA
+   ================================= */
+
+.chat-input {
+    display: flex;
+
+    padding: 10px;
+
+    background-color: white;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* =================================
+   INPUT BOX
+   ================================= */
+
+.chat-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 20px;
+
+    outline: none;
+}
+
+
+/* =================================
+   SEND BUTTON
+   ================================= */
+
+.chat-input button {
+    border: none;
+
+    background-color: #075e54;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.chat-input button:hover {
+    background-color: #128c7e;
+}

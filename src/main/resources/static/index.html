@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desktop AI Assistant</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <h2>🤖 Desktop AI Assistant</h2>
+             <div class="window-controls">
+
+        <button
+            type="button"
+            class="window-btn minimize-btn"
+            onclick="minimizeWindow()">
+            ─
+        </button>
+
+        <button
+            type="button"
+            class="window-btn maximize-btn"
+            onclick="maximizeWindow()">
+            □
+        </button>
+
+        <button
+            type="button"
+            class="window-btn close-btn"
+            onclick="closeWindow()">
+            ×
+        </button>
+
+    </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="message ai-message">
+                Hi! How can I help you?
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+      <button id="micBtn" type="button">🎤</button>
+<span id="voiceStatus">Tap to speak</span>
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+            >
+
+            <button id="sendButton">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
